@@ -48,6 +48,16 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       chat.antiLink = isEnable
       break
 
+  case 'restrict':
+    case 'restringir':
+     isAll = true
+        if (!isOwner) {
+          global.dfail('rowner', m, conn)
+          throw false
+      }
+      bot.restrict = isEnable
+      break
+
    case 'antidelete': 
      case 'antieliminar': 
      case 'delete':

@@ -1,7 +1,7 @@
 import yts from 'yt-search'
 
 var handler = async (m, { text, conn, args, command, usedPrefix }) => {
-    if (!text) return conn.reply(m.chat, `*${emojis} Por favor, ingresa una búsqueda de YouTube.*`, m);
+    if (!text) return conn.reply(m.chat, `*${emojis} Por favor, ingresa una búsqueda de YouTube.*`, m, rcanal);
 
     try {
         conn.reply(m.chat, wait, fkontak, m);

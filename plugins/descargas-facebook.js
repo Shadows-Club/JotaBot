@@ -2,7 +2,7 @@
 
 const handler = async (m, { text, conn, args, usedPrefix, command }) => {
   if (!args[0]) {
-    return conn.reply(m.chat, `*${emojis} Ingresa el link del video de Facebook.*`, fkontak, m);
+    return conn.reply(m.chat, `*${emojis} Ingresa el link del video de Facebook.*`, m, rcanal);
   }
 
   await m.react('🕒');

@@ -1,7 +1,7 @@
 import gplay from "google-play-scraper";
 let handler = async (m, { conn, text }) => {
   if (!text) {
-    return conn.reply(m.chat, `*${emojis} Ingresa el nombre de la app que quieras buscar*`, m);
+    return conn.reply(m.chat, `*${emojis} Ingresa el nombre de la app que quieras buscar*`, m, rcanal);
   }
   let res = await gplay.search({ term: text });
   if (!res.length) {

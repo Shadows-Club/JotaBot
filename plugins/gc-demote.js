@@ -9,7 +9,7 @@ const handler = async (m, {conn, usedPrefix, text}) => {
   } else if (!isNaN(text)) {
     var number = text;
   }
-  if (!text && !m.quoted) return conn.reply(m.chat, `*${emojis} Menciona a un usuario para quitar admin.*`, m);
+  if (!text && !m.quoted) return conn.reply(m.chat, `*${emojis} Menciona a un usuario para quitar admin.*`, m, rcanal);
   if (number.length > 13 || (number.length < 11 && number.length > 0)) return conn.reply(m.chat, `*⚠️ El usuario ingresado es incorrecto.*`, m);
   try {
     if (text) {

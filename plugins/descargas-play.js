@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 import { prepareWAMessageMedia, generateWAMessageFromContent } from '@whiskeysockets/baileys';
 
 const handler = async (m, { conn, args, usedPrefix }) => {
-    if (!args[0]) return conn.reply(m.chat, `*${emojis} Ingresa un título de Youtube.*`, m);
+    if (!args[0]) return conn.reply(m.chat, `*${emojis} Ingresa un título de Youtube.*`, m, rcanal);
 
     await m.react('🕓');
     try {

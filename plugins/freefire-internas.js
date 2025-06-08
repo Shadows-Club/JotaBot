@@ -3,7 +3,7 @@ const handler = async (m, { text, conn, args, usedPrefix, command }) => {
     if (args.length < 2) {  
         conn.reply(m.chat, `*${emojis} Proporciona una hora seguido el país y una modalidad.*
 *Usa MX para México y CO para Colombia.*
-> 💡 *Ejemplo:* ${usedPrefix + command} 21:00 mx clk`, m);
+💡 *Ejemplo:* ${usedPrefix + command} 21:00 mx clk`, m, rcanal);
         return;
     }
 

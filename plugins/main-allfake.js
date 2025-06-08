@@ -35,12 +35,12 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 global.creador = 'Wa.me/51927238856'
 global.botreal = `${(conn.user.jid == global.conn.user.jid ? 'Oficial' : 'Sub-Bot')}`
 global.ofcbot = `${conn.user.jid.split('@')[0]}`
-global.asistencia = 'Wa.me/51927238856'
+global.asistencia = 'Wa.me/573155227977'
 global.namech = 'Jota Bot'
 global.namechannel2 = 'ꘓꘓ   ໒☀️ؑ   𝖲ᥙᥒ𝖿͟ᥣ͟ᥲ𝗋ᥱࣲ  𝖳ᥱᥲ𝗆 彡'
 global.namegrupo = 'JotaBot'
-global.namecomu = 'NovaSpark'
-global.namecomu2 = 'Jota'
+global.nameclub = 'Shadow′s Club'
+global.namecomu = 'Jota'
 
 //REACCIONES 
 global.rwait = '🕒'

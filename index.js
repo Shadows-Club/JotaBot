@@ -21,7 +21,7 @@ say('Jota Bot', {
   align: 'center',
   gradient: ['red', 'magenta']
 });
-say(`Developed By Shadow's Club 🌹`, {
+say(`Developed By Shadow's Club 🌹\nDev.Criss 🇦🇱\nEl único`, {
   font: 'console',
   align: 'center',
   gradient: ['red', 'magenta']

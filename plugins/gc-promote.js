@@ -8,7 +8,7 @@ const handler = async (m, {conn, usedPrefix, text}) => {
     var number = text;
   }
 
-  if (!text && !m.quoted) return conn.reply(m.chat, `*${emojis} Mencione al usuario para promoverlo.*`, m);
+  if (!text && !m.quoted) return conn.reply(m.chat, `*${emojis} Mencione al usuario para promoverlo.*`, m, rcanal);
   if (number.length > 13 || (number.length < 11 && number.length > 0)) return conn.reply(m.chat, '*⚠️ El usuario ingresado es incorrecto.*', m);
 
   try {
@@ -22,7 +22,7 @@ const handler = async (m, {conn, usedPrefix, text}) => {
   } catch (e) {
   } finally {
     conn.groupParticipantsUpdate(m.chat, [user], 'promote');
-    conn.reply(m.chat, `*✅ Órdenes Recibidas.*`, m);
+    conn.reply(m.chat, `*✅ Órdenes Recibidas.*`, m, rcanal);
   }
 };
 handler.help = ['*<@tag>*'].map((v) => 'promote ' + v);

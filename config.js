@@ -12,6 +12,7 @@ global.owner = [
    ['51927238856', 'Cristian Escobar', true],
    ['51990841568', 'Moderador', false],
    ['90812788543600', '@Dev.Criss 🇦🇱', false]
+   ['229356135813175', '@Jxta', false]
 ]
 
 global.creadorbot = [

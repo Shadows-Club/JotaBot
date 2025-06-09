@@ -11,7 +11,7 @@ global.owner = [
    ['573155227977', 'Jota', true],
    ['51927238856', 'Cristian Escobar', true],
    ['51990841568', 'Moderador', true],
-   ['90812788543600', '@Dev.Criss 🇦🇱', true]
+   ['90812788543600', '@Dev.Criss', true]
    ['229356135813175', '@Jxta', true]
 ]
 

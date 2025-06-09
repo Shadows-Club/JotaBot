@@ -117,8 +117,8 @@ export async function handler(chatUpdate) {
                     chat.delete = false
                 if (!isNumber(chat.expired))
                     chat.expired = 0
-                if (!isNumber(user.warn))
-                    user.warn = 0
+                if (!isNumber(chat.warn))
+                    chat.warn = 0
             } else
                 global.db.data.chats[m.chat] = {
                     isBanned: false,
@@ -137,7 +137,8 @@ export async function handler(chatUpdate) {
                     nsfw: false, 
                     autoAceptar: false,
                     reaction: false,
-                    expired: 0, 
+                    expired: 0,
+                    warn: 0, 
                 }
             var settings = global.db.data.settings[this.user.jid]
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}

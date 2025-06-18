@@ -18,16 +18,16 @@
 "eslint": "eslint .",
 "eslintfix": "eslint --fix ."
 },
-"homepage": "https://github.com/NovaSpark-Community/JotaBot",
+"homepage": "https://github.com/Shadows-Club/JotaBot",
 "author": {
 "name": "Cristian Escobar"
 },
 "repository": {
 "type": "git",
-"url": "git+https://github.com/NovaSpark-Community/JotaBot.git"
+"url": "git+https://github.com/Shadows-Club/JotaBot.git"
 },
 "bugs": {
-"url": "https://github.com/NovaSpark-Community/JotaBot/issues"
+"url": "https://github.com/Shadows-Club/JotaBot/issues"
 },
 "license": "GPL-3.0-or-later",
 "dependencies": {
@@ -47,7 +47,7 @@
 "acrcloud": "latest",
 "google-play-scraper": "latest",
 "form-data": "^4.0.0",
-"cfonts": "^3.3.0",
+"cfonts": "latest",
 "boxen": "^7.1.1",
 "groq-sdk": "latest",
 "chalk": "^5.1.0",

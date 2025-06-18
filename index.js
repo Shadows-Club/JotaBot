@@ -16,12 +16,12 @@ const { name, description, author, version } = require(join(__dirname, './packag
 const { say } = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
 
-say('Jota Bot', {
+say('Shadow Ultra - MD', {
   font: 'chrome',
   align: 'center',
   gradient: ['red', 'magenta']
 });
-say(`Developed By Shadow's Club 🌹\nDev.Criss 🇦🇱\nEl único`, {
+say(`Developed By Shadow's Club 🌹`, {
   font: 'console',
   align: 'center',
   gradient: ['red', 'magenta']

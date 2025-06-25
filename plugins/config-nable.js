@@ -78,11 +78,10 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       bot.antiPrivate = isEnable
       break
 
-      case 'nsfw':
+ case 'nsfw':
       case 'modohorny':
-      isAll = true
        if (m.isGroup) {
-         if (!(isAdmin)) {
+         if (!(isAdmin || isOwner)) {
            global.dfail('admin', m, conn)
             throw false
            }}

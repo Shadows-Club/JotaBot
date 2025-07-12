@@ -17,6 +17,6 @@ await conn.sendFile(m.chat, res, 'error.jpg', null, m)
 handler.help = ['txt', 'brat']
 handler.tags = ['game']
 handler.command = ['txt', 'escribir', 'carbon']
-handler.limit = 1
+//handler.limit = 1
 handler.register = true 
 export default handler

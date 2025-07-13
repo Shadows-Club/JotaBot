@@ -97,6 +97,8 @@ handler.admin = true;
 handler.botAdmin = true;
 
 export default handler;*/
+
+
 const handler = async (m, { conn, text, command, usedPrefix }) => {
   let who;
 
@@ -121,21 +123,24 @@ const handler = async (m, { conn, text, command, usedPrefix }) => {
     }
   }
 
-  // Inicializar si no existe
-  global.db.data.chats[m.chat] ??= {};
-  global.db.data.chats[m.chat].warn ??= {};
-  global.db.data.chats[m.chat].warn[who] ??= 0;
+  // Inicializa la base si no existe
+  const db = global.db.data;
+  db['users-warn'] ??= {};
+
+  const groupWarns = db['users-warn'][m.chat] ??= {};
+  const userWarns = groupWarns[who] ??= { warns: 0, lastReason: '' };
 
   // Incrementar advertencia
-  global.db.data.chats[m.chat].warn[who]++;
+  userWarns.warns++;
+  userWarns.lastReason = text?.replace(/@\d+-?\d* /g, '') || 'Sin motivo';
 
-  const motivo = text?.replace(/@\d+-?\d* /g, '') || 'Sin motivo';
-  const warns = global.db.data.chats[m.chat].warn[who];
+  const warns = userWarns.warns;
+  const motivo = userWarns.lastReason;
 
   await m.reply(`*@${who.split`@`[0]}* recibió una advertencia en este grupo!\n📄 Motivo: ${motivo}\n⚠️ Advertencias: ${warns}/3`, null, { mentions: [who] });
 
   if (warns >= 3) {
-    global.db.data.chats[m.chat].warn[who] = 0;
+    groupWarns[who].warns = 0;
     await m.reply(`🚫 Te lo advertí varias veces!\n*@${who.split`@`[0]}* superaste las *3* advertencias, ahora serás eliminado/a.`, null, { mentions: [who] });
     await conn.groupParticipantsUpdate(m.chat, [who], 'remove');
   }

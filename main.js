@@ -27,9 +27,6 @@ import pkg from 'google-libphonenumber'
 const { PhoneNumberUtil } = pkg
 const phoneUtil = PhoneNumberUtil.getInstance()
 const {DisconnectReason, useMultiFileAuthState, MessageRetryMap, fetchLatestBaileysVersion, makeCacheableSignalKeyStore, jidNormalizedUser, PHONENUMBER_MCC} = await import('@whiskeysockets/baileys')
-// Variables necesarias para evitar el error de shorthand
-const msgRetryCounterCache = {}; // Puedes reemplazar por un Map si lo necesitas
-const msgRetryCounterMap = {};   // Igual, puedes usar: new Map()
 const { CONNECTING } = ws
 const { chain } = lodash
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000

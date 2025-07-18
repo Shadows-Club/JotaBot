@@ -21,7 +21,7 @@ say('Jota - MD', {
   align: 'center',
   gradient: ['red', 'magenta']
 });
-say(`Developed By Shadow's Club 🌹`, {
+say(`Developed By Shadow's Club 🌹\nSi viste esto es xk funciona 😛`, {
   font: 'console',
   align: 'center',
   gradient: ['red', 'magenta']
